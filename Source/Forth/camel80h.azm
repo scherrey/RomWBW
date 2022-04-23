@@ -989,13 +989,13 @@ MOVE2:  DW EXIT
 
 ; UTILITY WORDS AND STARTUP =====================
 
-;X WORDS    --          list all words in dict.
+;X words    --          list all words in dict.
 ;   LATEST @ BEGIN
 ;       DUP COUNT TYPE SPACE
 ;       NFA>LFA @
 ;   DUP 0= UNTIL
 ;   DROP ;
-    head WORDS,5,WORDS,docolon
+    head words,5,words,docolon
         DW LATEST,FETCH
 WDS1:   DW DUP,COUNT,TYPE,SPACE,NFATOLFA,FETCH
         DW DUP,ZEROEQUAL,qbranch,WDS1
